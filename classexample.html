@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    
+    <p id="demo"></p>
+
+
+<script>
+    class Car {
+    constructor(name, year, modell) {
+    this.name = name;
+    this.year = year;
+    this.model = modell;
+    }
+
+    modell(){
+        return "the model of the car is "+ this.model;
+    }
+
+    color(color){
+        this.color = color;
+        return "the color of the car is "+ this.color;
+    }
+
+    age() {
+    let date = new Date();
+    return date.getFullYear() - this.year;
+    }
+    }
+    let myCar = new Car("Ford", 2014, "Spider");
+    document.write(myCar.modell() +"<br>");
+    document.write(myCar.color('Gold'));
+    document.getElementById("demo").innerHTML ="My car is " + myCar.age() + " years old." + myCar.name;
+
+
+
+    
+
+ 
+</script>
+
+
+</body>
+</html>

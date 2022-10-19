@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    const business_staff = ["Daniel", "Esther","Nathaniel","Samuel"];
+    const training_staff = ["Stella", "Edna", "Blessing","Legend","Simon"];
+
+    document.write('<h2>Business center staff</h2>');
+    for(var i = 0; i<business_staff.length; i++ ){
+        document.write(business_staff[i]);
+        if(i<business_staff.length-1){
+            document.write(',');
+        }
+    }
+    document.write('<h2>Training center staff</h2>');
+    for(var y = 0; y<training_staff.length; y++ ){
+        document.write(training_staff[y]);
+        if(y<training_staff.length-1){
+            document.write(',');
+        }
+    }
+
+    const all_staff= business_staff.concat(training_staff);
+
+    function allStaff(){
+        document.getElementById('demo').innerHTML=all_staff;
+    }
+
+    
+</script>
+
+<p id="demo"></p>
+<button type="button" onclick="allStaff()"> display all staff</button>
+    
+</body>
+</html>

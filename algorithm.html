@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<script>
+    var a,b,c,D,x1,x2,rp,ip;
+
+    a= 2
+    b= 4
+    c= 20
+    D = b^2-4*a*c;
+    if(D >= 0){
+        R1=(-b+Math.sqrt(D))/2*a;
+        R2=(-b+Math.sqrt(D))/2*a;
+        console.log(R1);
+        console.log(R2);
+    }
+    else{
+        rp = b/2*a;
+        ip=sqrt(-D)/2*a;
+        console.log(rp+(ip));
+        document.write(rp-(ip));
+    }
+</script>
+</body>
+</html>

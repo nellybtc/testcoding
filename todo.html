@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+</head>
+<body>
+    <h1>
+        ToDo List using pop() and push() array functions
+    </h1>
+
+    <script>
+        const todolist = ['washing', 'cooking', 'coding', 'playing', 'sleeping', 'gaming'];
+
+        let sn = 1;
+        let snA = 1;
+        let snD = 1;
+
+        for(var i=0; i<todolist.length; i++){
+            document.write(sn + "." +todolist[i]+"--"+"<button onclick='deletetask()'>Delete</button><br>")
+            sn++
+        }
+
+        function addtask(value) {
+            document.write('<h1>ToDo List using pop() and push() array functions</h1>');
+            todolist.push(value);
+
+            for(var i=0; i<todolist.length; i++){
+            document.write(snA + "."  +todolist[i]+"--"+"<button>Delete</button><br>")
+            snA++
+        }
+        document.write('<h3>Task todo form</h3>');
+        document.write('<form method="post" id="form_id" onsubmit="addtask(document.getElementById("todolist_id").value)"><label for="">New Task</label> <input type="text" name="" id="todolist_id" value=""><br><input type="submit" id="task_submit" value="Submit task"></form>');
+        }
+
+        function deletetask(){
+            document.write('<h1>ToDo List using pop() and push() array functions</h1>');
+            todolist.pop();
+
+            for(var i=0; i<todolist.length; i++){
+            document.write(snD + "."  +todolist[i]+"--"+"<button>Delete</button><br>")
+            snD++
+        }
+        document.write('<h3>Task todo form</h3>');
+        document.write('<form method="post" id="form_id" onsubmit="addtask(document.getElementById("todolist_id").value)"><label for="">New Task</label> <input type="text" name="" id="todolist_id" value=""><br><input type="submit" id="task_submit" value="Submit task"></form>');
+        }
+    </script>
+    <br>
+
+    <h3>Task todo form</h3>
+
+    <form method="post" id="form_id" onsubmit="addtask(document.getElementById('todolist_id').value)">
+        <label for="">New Task</label> <input type="text" name="" id="todolist_id" value=""><br>
+        <input type="submit" id="task_submit" value="Submit task">
+
+    </form>
+</body>
+</html>
